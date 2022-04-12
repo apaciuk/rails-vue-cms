@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-200">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Example on how to use Inertia.js to build the frontend with Vue.js within a Ruby on Rails application" name="description" />
+    <meta content="PingCRM" name="application-name" />
+    <meta content="#667eea" name="theme-color" />
+
+    <%= tag :meta, name: 'matomo-host', content: ENV['MATOMO_HOST'] %>
+    <%= tag :meta, name: 'matomo-id', content: ENV['MATOMO_ID'] %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="manifest" href="/site.webmanifest" >
+    <link rel="icon" type="image/png" href="<%= asset_pack_url('static/favicon.png') %>">
+
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body class="font-sans leading-none text-gray-800 antialiased">
+    <noscript>
+      <p>We're sorry but PingCRM doesn't work properly without JavaScript enabled. Please enable it to continue.</p>
+    </noscript>
+
+    <%= yield %>
+  </body>
+</html>
